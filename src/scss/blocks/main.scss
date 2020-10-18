@@ -1,0 +1,236 @@
+.main {
+  padding: 50px 0 0;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(236, 236, 236);
+  margin-bottom: 60px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(119, 119, 119);
+  border-bottom: 5px solid transparent;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+  margin-right: 40px;
+
+  &:hover {
+    color: #000000;
+    border-bottom-color: aqua;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  border-radius: 2px;
+  height: 20px;
+  padding: 5px;
+  color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  top: -4px;
+  z-index: -1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  width: 0;
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  width: calc(100% - 24px);
+}
+
+.checkbox-all:checked + label,
+.checkbox-popular:checked + label {
+  color: #000;
+  border-bottom-color: aqua;
+}
+
+.project {
+  border-radius: 3%;
+  box-shadow: 6px 7px 28px 0 #61615ebd;
+  transition: all 0.3s linear;
+}
+
+.project.js,
+.project.html,
+.project.less,
+.project.pug,
+.project.scss {
+  opacity: 0;
+  transform: scale(0);
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  border-width: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.checkbox-all:checked ~ .portfolio__card-inner .project.js,
+.checkbox-all:checked ~ .portfolio__card-inner .project.html,
+.checkbox-all:checked ~ .portfolio__card-inner .project.less,
+.checkbox-all:checked ~ .portfolio__card-inner .project.pug,
+.checkbox-all:checked ~ .portfolio__card-inner .project.scss,
+.checkbox-js:checked ~ .portfolio__card-inner .project.js,
+.checkbox-html:checked ~ .portfolio__card-inner .project.html,
+.checkbox-less:checked ~ .portfolio__card-inner .project.less,
+.checkbox-pug:checked ~ .portfolio__card-inner .project.pug,
+.checkbox-scss:checked ~ .portfolio__card-inner .project.scss {
+  opacity: 1;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  visibility: visible;
+  transform: scale(1);
+  transition: all 1s linear;
+  width: 560px;
+  height: 488px;
+}
+
+.all-post-button {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(119, 119, 119);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 5px solid transparent;
+  outline: none;
+  transition: 0.4s linear;
+
+  &:hover {
+    color: #000;
+    border-bottom-color: aqua;
+  }
+
+  span:first-child {
+    margin-right: 10px;
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post {
+  max-width: 870px;
+}
+
+.post-item {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 27px 0px rgba(0, 0, 0, 0.08);
+  margin-bottom: 60px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.post__img {
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+}
+
+.post__desc {
+  padding: 50px;
+}
+
+.post__meta {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  padding: 15px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(211, 196, 166);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  margin-bottom: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(211, 196, 166);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 42px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(211, 196, 166);
+  }
+}
+
+.post__title {
+  font-size: 48px;
+  font-family: "PlayfairDisplay", serif;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+}
+
+.post__text {
+  font-size: 16px;
+  font-family: "PlayfairDisplay", sans-serif;
+  color: rgb(119, 119, 119);
+  line-height: 2;
+  text-align: left;
+  letter-spacing: 0.56px;
+}
+
+.post__link {
+  font-size: 15px;
+  font-family: "Montserrat", serif;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+}

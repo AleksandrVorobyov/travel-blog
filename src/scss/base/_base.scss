@@ -1,0 +1,56 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+    color: #000;
+    line-height: 1;
+}
+
+/* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
+body::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 0px;
+    background-color: transparent;
+}
+
+input,
+textarea {
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    // font-weight: 400;
+    // line-height: 1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+
