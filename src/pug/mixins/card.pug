@@ -1,2 +1,9 @@
-mixin card()
-    h4 hello world!
+mixin post(img, alt, meta, title, link)
+    .post
+        .post__img
+            img(src="./img/post/" + img, alt="01.jpg")
+        .post__desc
+            h5.post__meta #{meta}
+            h4.post__title #{title}
+            block
+            a(href= link).post__link Read More
