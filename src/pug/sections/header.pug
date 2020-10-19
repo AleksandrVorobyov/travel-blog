@@ -1,7 +1,8 @@
 .header-wrapper
     nav.nav
-        button.nav__menu
-            img(src="./img/nav/menu.png", alt="search")
+        .nav__menu
+            button
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
         ul.nav__link
             li.nav__link-item
                 a(href="#").link.link--active HOME
@@ -13,8 +14,9 @@
                 a(href="#").link STYLES
             li.nav__link-item
                 a(href="#").link CONTACT
-        button.nav__search
-            img(src="./img/nav/search.png", alt="search")
+        .nav__search
+            button
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i>
     .header__logo
         h1.logo Travel Blog
         h2.logo__teg Blog Template

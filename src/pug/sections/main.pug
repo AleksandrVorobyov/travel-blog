@@ -9,17 +9,86 @@ section.main
             .list-item
                 button.all-post-button(type="submit") 
                     span All Post
-                    i(class="fa fa-angle-down" aria-hidden="true")
+                    i(class="fa fa-angle-down fa-2x" aria-hidden="true")
         .main-content
-            .post-wrap
-                +post("01.jpg", "01.jpg", "Lifestyle", "End of the Ocean", "#")
-                    p Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius. Sed congue ligula leo, in molestie mauris viverra quis. Ut a dui a lectus molestie pulvinar id non magna. Nam blandit dictum ante id venenatis.
-                +post("02.jpg", "02.jpg", "Travel", "Land Of Mysteries", "#")
-                    p Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius. Sed congue ligula leo, in molestie mauris viverra quis. Ut a dui a lectus molestie pulvinar id non magna. Nam blandit dictum ante id venenatis.
-                +post("03.jpg", "03.jpg", "PHOTOGRAPHY", "Life Advice Looking Through A Window", "#")
-                    p Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius. Sed congue ligula leo, in molestie mauris viverra quis. Ut a dui a lectus molestie pulvinar id non magna. Nam blandit dictum ante id venenatis.
-
+            .main-content-wrap
+                .post-wrap
+                    +post("01.jpg", "01.jpg", "Lifestyle", "End of the Ocean", "#")
+                        p Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius. Sed congue ligula leo, in molestie mauris viverra quis. Ut a dui a lectus molestie pulvinar id non magna. Nam blandit dictum ante id venenatis.
+                    +post("02.jpg", "02.jpg", "Travel", "Land Of Mysteries", "#")
+                        p Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius. Sed congue ligula leo, in molestie mauris viverra quis. Ut a dui a lectus molestie pulvinar id non magna. Nam blandit dictum ante id venenatis.
+                    +post("03.jpg", "03.jpg", "PHOTOGRAPHY", "Life Advice Looking Through A Window", "#")
+                        p Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius. Sed congue ligula leo, in molestie mauris viverra quis. Ut a dui a lectus molestie pulvinar id non magna. Nam blandit dictum ante id venenatis.
+                button.post__button-more Load More
             .post-column
-
-
+                .info-card
+                    .info-card__avatar
+                        img(src="./img/avatar/01.jpg", alt="01.jpg")
+                    h4.info-card__title Luis Faulkner
+                    p.info-card__subtitle Ted fermentum sed felis ut eleifend. Integer laoreet massa sed leo rhoncus, non posuere eros varius.
+                    .info-card__img
+                        img(src="./img/info/01.jpg", alt="01.jpg")
+                .category-card
+                    .category-card__title Categories
+                    ul.category-card__nav
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Travel
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Food
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Lifestyle
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Health & Fintness
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Minimalizam
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Recipes
+                        li.category-card__nav-item
+                            a(href="#")
+                                i(class="fa fa-angle-right" aria-hidden="true")
+                                span Review
+                .popular-card
+                    h4.popular-card__title Popular Posts
+                    .popular-card-wrap
+                        .popular-card__item
+                            .popular-card__img
+                                img(src="./img/avatar/02.jpg", alt="02.jpg")
+                            a(href="#").popular-card__text
+                                p.popular-card__desc Sand Castle on the  Beach
+                                p.popular-card__author by John Doe
+                        .popular-card__item
+                            .popular-card__img
+                                img(src="./img/avatar/03.jpg", alt="03.jpg")
+                            a(href="#").popular-card__text
+                                p.popular-card__desc How To Visit Neuschwan Castle By Train
+                                p.popular-card__author by Adam Rose
+                .inst-card
+                    h4.inst-card__title
+                        span Follow @Luisgarica
+                        <i class="fa fa-instagram fa-1x" aria-hidden="true"></i>
+                    .inst-card__img-wrap
+                        a(href="#").inst-card__img-item
+                            img(src="./img/inst/01.jpg", alt="01.jpg")
+                        a(href="#").inst-card__img-item
+                            img(src="./img/inst/02.jpg", alt="2.jpg")
+                        a(href="#").inst-card__img-item
+                            img(src="./img/inst/03.jpg", alt="03.jpg")
+                        a(href="#").inst-card__img-item
+                            img(src="./img/inst/04.jpg", alt="04.jpg")
+                        a(href="#").inst-card__img-item
+                            img(src="./img/inst/05.jpg", alt="05.jpg")
+                        a(href="#").inst-card__img-item
+                            img(src="./img/inst/06.jpg", alt="06.jpg")
 

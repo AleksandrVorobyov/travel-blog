@@ -1,9 +1,24 @@
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 60px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 60px;
   border-bottom: 2px solid rgb(236, 236, 236);
+
+  @media (min-width: 1170px) {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 60px;
+  }
+}
+
+.nav .fa-2x {
+  font-size: 5em;
+
+  @media (min-width: 1170px) {
+    font-size: 2em;
+  }
 }
 
 .nav__link {
@@ -18,9 +33,9 @@
 
 .link {
   display: inline-block;
-  font-size: 18px;
+  font-size: 36px;
   padding: 50px 0 48px;
-  font-family: "PlayfairDisplay", serif;
+  font-family: "Playfair Display", serif;
   color: rgb(34, 34, 34);
   text-transform: uppercase;
   text-decoration: none;
@@ -31,13 +46,23 @@
 
   &:hover {
     color: aqua;
-    border-color: aqua;
+
+    @media (min-width: 1170px) {
+      border-color: aqua;
+    }
+  }
+
+  @media (min-width: 1465px) {
+    font-size: 18px;
   }
 }
 
 .link--active {
   color: aqua;
-  border-color: aqua;
+
+  @media (min-width: 1170px) {
+    border-color: aqua;
+  }
 }
 
 .header__logo {
@@ -46,27 +71,35 @@
 }
 
 .logo {
-  font-size: 36px;
-  font-family: "Montserrat", serif;
+  font-size: 72px;
+  font-family: "Montserrat", sans-serif;
   color: rgb(34, 34, 34);
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @media (min-width: 1465px) {
+    font-size: 36px;
+  }
 }
 
 .logo__teg {
   display: inline;
   margin-bottom: 50px;
-  font-size: 15px;
-  font-family: "Montserrat", serif;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
   color: rgb(34, 34, 34);
   text-transform: uppercase;
   line-height: 1;
   padding: 15px 0;
   border-top: 2px solid rgb(34, 34, 34);
   border-bottom: 1px solid rgb(34, 34, 34);
+
+  @media (min-width: 1465px) {
+    font-size: 15px;
+  }
 }
 
 .header__carousel {
@@ -84,7 +117,7 @@
 
 .carousel-text__title {
   font-size: 100px;
-  font-family: "PlayfairDisplay";
+  font-family: "Playfair Display", serif;
   color: rgb(255, 255, 255);
   font-style: italic;
   line-height: 1;
@@ -94,7 +127,7 @@
 .carousel-text__subtitle {
   position: relative;
   display: inline;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   color: rgb(255, 255, 255);
@@ -104,6 +137,10 @@
   padding: 15px 0;
   margin-bottom: 50px;
 
+  @media (min-width: 1465px) {
+    font-size: 30px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -111,9 +148,13 @@
     top: 0;
     left: 50%;
     height: 3px;
-    width: 242px;
+    width: 442px;
     background-color: #ffffff;
     transform: translate(-50%);
+
+    @media (min-width: 1465px) {
+      width: 242px;
+    }
   }
 
   &::before {
@@ -123,13 +164,26 @@
     bottom: 0;
     left: 50%;
     height: 3px;
-    width: 242px;
+    width: 442px;
     background-color: #ffffff;
     transform: translate(-50%);
+
+    @media (min-width: 1465px) {
+      width: 242px;
+    }
   }
 }
 
-.nav__menu {
+.nav__menu,
+.nav__search {
+  margin: 0 auto;
+
+  @media (min-width: 1170px) {
+    margin: 0;
+  }
+}
+
+.nav__menu button {
   cursor: pointer;
   outline-color: aqua;
   border: none;
@@ -138,7 +192,7 @@
   padding: 5px;
 }
 
-.nav__search {
+.nav__search button {
   cursor: pointer;
   outline-color: aqua;
   border: none;
@@ -157,8 +211,8 @@
 
 .carousel__head.owl-carousel .owl-dot {
   background-color: #fff;
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
   margin-right: 10px;
   border-radius: 50%;
   outline-color: aqua;
@@ -167,5 +221,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: 1465px) {
+    width: 15px;
+    height: 15px;
   }
 }
