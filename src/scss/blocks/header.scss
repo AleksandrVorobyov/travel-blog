@@ -1,11 +1,26 @@
+.header-wrapper {
+  padding-top: 138px;
+
+  
+  @media (min-width: 1170px) {
+    padding-top: 0;
+  }
+}
+
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px 60px;
+  justify-content: space-between;
+  padding: 30px 30px;
   border-bottom: 2px solid rgb(236, 236, 236);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.616);
 
   @media (min-width: 1170px) {
+    position: relative;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
@@ -22,9 +37,12 @@
 }
 
 .nav__link {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
+  display: none;
+  @media (min-width: 1170px) {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
 }
 
 .nav__link-item {
@@ -176,7 +194,7 @@
 
 .nav__menu,
 .nav__search {
-  margin: 0 auto;
+  // margin: 0 auto;
 
   @media (min-width: 1170px) {
     margin: 0;

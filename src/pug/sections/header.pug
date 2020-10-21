@@ -1,4 +1,4 @@
-.header-wrapper
+.header-wrapper#home
     nav.nav
         .nav__menu
             button
@@ -17,6 +17,18 @@
         .nav__search
             button
                 <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+    .burger-menu
+        ul.burger__link
+            li.burger__link-item
+                a(href="#home" data-link).link-burger HOME
+            li.burger__link-item
+                a(href="#about" data-link).link-burger ABOUT ME
+            li.burger__link-item
+                a(href="#post" data-link).link-burger POST
+            li.burger__link-item
+                a(href="#style" data-link).link-burger STYLES
+            li.burger__link-item
+                a(href="#contact" data-link).link-burger CONTACT
     .header__logo
         h1.logo Travel Blog
         h2.logo__teg Blog Template

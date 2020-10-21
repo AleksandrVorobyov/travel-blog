@@ -17,7 +17,7 @@
 
 <body class="ui">
 	<header>
-		<div class="header-wrapper">
+		<div class="header-wrapper" id="home">
 			<nav class="nav">
 				<div class="nav__menu">
 					<button><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
@@ -33,6 +33,15 @@
 					<button><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
 				</div>
 			</nav>
+			<div class="burger-menu">
+				<ul class="burger__link">
+					<li class="burger__link-item"><a class="link-burger" href="#home" data-link="data-link">HOME</a></li>
+					<li class="burger__link-item"><a class="link-burger" href="#about" data-link="data-link">ABOUT ME</a></li>
+					<li class="burger__link-item"><a class="link-burger" href="#post" data-link="data-link">POST</a></li>
+					<li class="burger__link-item"><a class="link-burger" href="#style" data-link="data-link">STYLES</a></li>
+					<li class="burger__link-item"><a class="link-burger" href="#contact" data-link="data-link">CONTACT</a></li>
+				</ul>
+			</div>
 			<div class="header__logo">
 				<h1 class="logo">Travel Blog</h1>
 				<h2 class="logo__teg">Blog Template</h2>
@@ -62,7 +71,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="main">
+		<section class="main" id="about">
 			<div class="container">
 				<div class="list">
 					<div class="list-item">
@@ -103,7 +112,7 @@
 								</div>
 							</div>
 						</div>
-						<button class="post__button-more">Load More</button>
+						<button class="post__button-more" id="post">Load More</button>
 					</div>
 					<div class="post-column">
 						<div class="info-card">
@@ -141,7 +150,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="inst-card">
+						<div class="inst-card" id="style">
 							<h4 class="inst-card__title"><span>Follow @Luisgarica</span><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></h4>
 							<div class="inst-card__img-wrap"><a class="inst-card__img-item" href="#"><img src="./img/inst/01.jpg" alt="01.jpg" /></a><a class="inst-card__img-item" href="#"><img src="./img/inst/02.jpg" alt="2.jpg" /></a><a class="inst-card__img-item" href="#"><img src="./img/inst/03.jpg" alt="03.jpg" /></a><a class="inst-card__img-item" href="#"><img src="./img/inst/04.jpg" alt="04.jpg" /></a><a class="inst-card__img-item" href="#"><img src="./img/inst/05.jpg" alt="05.jpg" /></a><a class="inst-card__img-item" href="#"><img src="./img/inst/06.jpg" alt="06.jpg" /></a></div>
 						</div>
@@ -151,7 +160,7 @@
 		</section>
 	</main>
 	<footer>
-		<div class="footer">
+		<div class="footer" id="contact">
 			<div class="container">
 				<div class="footer-wrap">
 					<div class="footer__nav">
