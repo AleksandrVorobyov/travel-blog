@@ -7,9 +7,16 @@ section.main#about
                 input#popular.checkbox-popular( type='radio' name='checkbox')
                 label(for="popular") Popular Post
             .list-item
-                button.all-post-button(type="submit") 
-                    span All Post
+                .all-post-button(type="submit" id="post-btn" data-select) 
+                    span(data-select-title) All Post
                     i(class="fa fa-angle-down fa-2x" aria-hidden="true")
+                    div.list-dropdown.scale0
+                        div(data-select-item="Last Post").list-dropdown__item Last Post
+                        div(data-select-item="Old Post").list-dropdown__item Old Post
+                select(name="post" class='scale0').list-dropdown
+                    option(value="none").list-dropdown__item All Post
+                    option(value="Last Post").list-dropdown__item Last Post
+                    option(value="Old Post").list-dropdown__item Old Post
         .main-content
             .main-content-wrap
                 .post-wrap

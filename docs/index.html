@@ -81,7 +81,17 @@
 						<label for="popular">Popular Post</label>
 					</div>
 					<div class="list-item">
-						<button class="all-post-button" type="submit"> <span>All Post</span><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></button>
+						<div class="all-post-button" type="submit" id="post-btn" data-select="data-select"> <span data-select-title="data-select-title">All Post</span><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+							<div class="list-dropdown scale0">
+								<div class="list-dropdown__item" data-select-item="Last Post">Last Post</div>
+								<div class="list-dropdown__item" data-select-item="Old Post">Old Post</div>
+							</div>
+						</div>
+						<select class="scale0 list-dropdown" name="post">
+							<option class="list-dropdown__item" value="none">All Post</option>
+							<option class="list-dropdown__item" value="Last Post">Last Post</option>
+							<option class="list-dropdown__item" value="Old Post">Old Post</option>
+						</select>
 					</div>
 				</div>
 				<div class="main-content">

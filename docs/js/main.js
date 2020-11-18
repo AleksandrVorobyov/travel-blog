@@ -46,3 +46,21 @@ $(document).ready(function() {
     $('body').removeClass('lock');
   });
 });
+
+const selectDropdown = document.querySelector("[data-select]");
+
+selectDropdown.addEventListener('click', function() {
+    let realSelect = this.nextElement;
+    if (event.target.hasAttribute('data-select-item')) {
+      let itemTitle = event.target.getAttribute('data-select-item');
+      this.querySelector('[data-select-title]').textContent = itemTitle;
+
+      this.querySelector('.list-dropdown').classList.toggle('scale0');
+
+      if (realSelect) {
+        realSelect.value = itemTitle;
+      }
+    } else {
+      this.querySelector('.list-dropdown').classList.toggle('scale0');
+    }
+  })
